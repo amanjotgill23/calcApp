@@ -8,72 +8,43 @@
     <script src="script.js"></script>
     <title>Calculator</title>
 </head>
-<body>    
-    <table class="calculator">
-        <tr>
-            <td colspan="3">
-                <input type="text" id="display" readonly/>
-            </td>
-            <td>
-                <input type="button" value="=" onclick="calc()"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" value="7" onclick="dis('7')"/>
-            </td>
-            <td>
-                <input type="button" value="8" onclick="dis('8')"/>
-            </td>
-            <td>
-                <input type="button" value="9" onclick="dis('9')"/>
-            </td>
-            <td>
-                <input type="button" value="+" onclick="disOp('+')"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" value="4" onclick="dis('4')"/>
-            </td>
-            <td>
-                <input type="button" value="5" onclick="dis('5')"/>
-            </td>
-            <td>
-                <input type="button" value="6" onclick="dis('6')"/>
-            </td>
-            <td>
-                <input type="button" value="-" onclick="disOp('-')"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" value="1" onclick="dis('1')"/>
-            </td>
-            <td>
-                <input type="button" value="2" onclick="dis('2')"/>
-            </td>
-            <td>
-                <input type="button" value="3" onclick="dis('3')"/>
-            </td>
-            <td>
-                <input type="button" value="*" onclick="disOp('*')"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" value="C" onclick="clr()"/>
-            </td>
-            <td>
-                <input type="button" value="0" onclick="dis('0')"/>
-            </td>
-            <td>
-                <input type="button" value="." onclick="dis('.')"/>
-            </td>
-            <td>
-                <input type="button" value="/" onclick="disOp('/')"/>
-            </td>
-        </tr>
-    </table>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Try out the Calculator!</h1>
+        </div> 
+        <div class="table">   
+            <table class="calculator">
+                <tr>
+                    <td colspan="3"><input type="text" class="displayBox" id="display" readonly/></td>
+                    <td><input type="button" class="btn" value="=" onclick="calc()"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="7" onclick="dis('7')"/></td>
+                    <td><input type="button" class="btn" value="8" onclick="dis('8')"/></td>
+                    <td><input type="button" class="btn" value="9" onclick="dis('9')"/></td>
+                    <td><input type="button" class="btn" value="+" onclick="disOp('+')"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="4" onclick="dis('4')"/></td>
+                    <td><input type="button" class="btn" value="5" onclick="dis('5')"/></td>
+                    <td><input type="button" class="btn" value="6" onclick="dis('6')"/></td>
+                    <td><input type="button" class="btn" value="-" onclick="disOp('-')"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="1" onclick="dis('1')"/></td>
+                    <td><input type="button" class="btn" value="2" onclick="dis('2')"/></td>
+                    <td><input type="button" class="btn" value="3" onclick="dis('3')"/></td>
+                    <td><input type="button" class="btn" value="*" onclick="disOp('*')"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="C" onclick="clr()"/></td>
+                    <td><input type="button" class="btn" value="0" onclick="dis('0')"/></td>
+                    <td><input type="button" class="btn" value="." onclick="dis('.')"/></td>
+                    <td><input type="button" class="btn" value="/" onclick="disOp('/')"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
