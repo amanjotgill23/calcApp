@@ -1,7 +1,13 @@
 "use strict";
 
+var resultShown = false;
+
 // function to display clicked number
 function dis(x) {
+    if (resultShown === true) {
+        clr();
+        resultShown = false;
+    }
     document.getElementById("display").value+=x;
 }
 
@@ -9,23 +15,32 @@ function dis(x) {
 function disOp(y) {
     let currentDisplay = document.getElementById("display").value;
     let lastDigit = currentDisplay.charAt(currentDisplay.length - 1);
-    switch (lastDigit) {
-        case "-":
-        case "+":
-        case "*":
-        case "/":
-            var newDisplay =  currentDisplay.substr(0,[currentDisplay.length - 1]) + y;
-            document.getElementById("display").value = newDisplay;
-            break;
-        default:
-            document.getElementById("display").value+=y;            
+    if (currentDisplay === "") {
+        alert("Please enter a number first");
+    } else {
+        switch (lastDigit) {
+            case "-":
+            case "+":
+            case "*":
+            case "/":
+                var newDisplay =  currentDisplay.substr(0,[currentDisplay.length - 1]) + y;
+                document.getElementById("display").value = newDisplay;
+                break;
+            default:
+                document.getElementById("display").value+=y;            
+        }
     }
+    resultShown = false;
 }
 
 // function to calculate
 function calc() {
     var currentDisplay = document.getElementById("display").value;
     var inputArray = currentDisplay.split(/([-,+,*,/])/);
+
+    if (inputArray[1] === "-") {
+        inputArray.splice(0, 3, inputArray[1] + inputArray[2]);
+    }
     
     var divide = inputArray.indexOf("/");
     while (divide != -1) {
@@ -52,6 +67,7 @@ function calc() {
     }
 
     document.getElementById("display").value = inputArray[0];
+    resultShown = true;
 }
 
 // function to clear display
