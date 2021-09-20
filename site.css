@@ -53,3 +53,9 @@ body {
 .btn:hover  {
     box-shadow: 1px 2px 4px 1px rgb(147, 182, 147);
 }
+
+@media screen and (max-width: 800px) {
+    .container {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
