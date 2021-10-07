@@ -25,6 +25,10 @@ main {
     box-shadow: 2px 4px 6px 2px black;
 }
 
+.calculator:hover  {
+    box-shadow: 4px 8px 12px 4px rgb(41, 40, 40);
+}
+
 .displayBox {
     border: 1px solid black;
     border-radius: 1px;
