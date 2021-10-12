@@ -15,3 +15,5 @@ Changelog for this project:
 5. Added a heading to the webpage and css styling, including color, border and font details.
 
 6. Streamlined the JavaScript file to make the app more efficient and bug free.
+
+7. Added Media Queries to site CSS file for screen sizes of less than 400px.
